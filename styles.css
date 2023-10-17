@@ -121,8 +121,14 @@ header {
     }
 
     .mobile-menu {
-        left: 0;
+        right: -250px;
+        transition: right 0.3s;
     }
+
+    .mobile-menu.open {
+    right: 0;
+}
+    
     .mobile-dropdown:hover .mobile-dropdown-content {
         display: block;
     }
