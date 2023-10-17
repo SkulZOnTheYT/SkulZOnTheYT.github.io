@@ -33,31 +33,6 @@ header {
     transition: background-color 0.3s;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    background-color: #333; 
-    padding: 0; 
-}
-
-nav li {
-    margin-right: 20px;
-    position: relative;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff; 
-    font-weight: bold;
-    padding: 10px 15px; 
-    display: block;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: #555; 
-}
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -108,26 +83,24 @@ nav a:hover {
     color: #fff;
 }
 
-.mobile-menu {
-    list-style: none;
-    padding: 0;
+.mobile-dropdown-content {
+    display: none;
     background-color: #333;
     position: absolute;
+    left: 100%;
     top: 0;
-    left: -100%;
-    width: 250px;
-    height: 100%;
-    transition: left 0.3s;
+    width: 200px;
 }
 
-.mobile-menu li {
-    margin: 10px 0;
+.mobile-dropdown-content li {
     text-align: center;
+    padding: 10px;
 }
 
-.mobile-menu a {
+.mobile-dropdown-content a {
     color: #fff;
     text-decoration: none;
+    display: block;
 }
 
 @media (max-width: 768px) {
@@ -137,6 +110,10 @@ nav a:hover {
 
     .open-sidebar {
         display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
     }
 
     .mobile-sidebar {
@@ -145,6 +122,9 @@ nav a:hover {
 
     .mobile-menu {
         left: 0;
+    }
+    .mobile-dropdown:hover .mobile-dropdown-content {
+        display: block;
     }
 }
 
