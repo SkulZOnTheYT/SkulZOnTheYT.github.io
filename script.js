@@ -1,18 +1,10 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
 
-function generateRandomColor() {
-    const letters = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
-
-
-function changeHeaderBackgroundColor() {
-    const header = document.querySelector('header');
-    header.style.backgroundColor = generateRandomColor();
-}
-
-
-window.addEventListener('load', changeHeaderBackgroundColor);
+    // Tambahkan event listener untuk tombol sidebar
+    sidebarToggle.addEventListener('click', function() {
+        // Toggle class 'open' pada mobile-menu
+        mobileMenu.classList.toggle('open');
+    });
+});
