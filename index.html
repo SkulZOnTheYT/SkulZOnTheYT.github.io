@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To My Website</title>
+    <title>SkulZ | My Website</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
 </head>
 <body>
     <header>
         <h1>Selamat datang di Website Saya!</h1>
+         <nav>
+          <ul class="desktop-menu">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="https://skulzontheyt.github.io/Tentang/">Tentang</a></li>
+            <li><a href="https://skulzontheyt.github.io/Kontak/">Kontak</a></li>
+            <li class="dropdown">
+                <a href="#">Karya</a>
+                <ul class="dropdown-content">
+                    <li><a href="https://skulzontheyt.github.io/Plugin/">Plugin</a></li>
+                    <li><a href="https://skulzontheyt.github.io/Sekolah/">Sekolah</a></li>
+                    <li><a href="https://skulzontheyt.github.io/Minecraft/">Minecraft</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Berita</a>
+                <ul class="dropdown-content">
+                    <li><a href="https://skulzontheyt.github.io/Edukasi/">Edukasi</a></li>
+                    <li><a href="https://skulzontheyt.github.io/Game/">Game</a></li>
+                </ul>
+            </li>
+         </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
+    <div class="mobile-sidebar">
+        <button class="open-sidebar">☰</button>
+        <ul class="mobile-menu">
             <li><a href="#">Beranda</a></li>
             <li><a href="https://skulzontheyt.github.io/Tentang/">Tentang</a></li>
             <li><a href="https://skulzontheyt.github.io/Kontak/">Kontak</a></li>
@@ -33,7 +56,7 @@
                 </ul>
             </li>
         </ul>
-    </nav>
+    </div>
 
     <main>
         <section>
