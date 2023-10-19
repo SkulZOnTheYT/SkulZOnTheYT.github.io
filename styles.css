@@ -47,6 +47,23 @@ header {
     margin-left: 50px;
   }
 
+. openbtn {
+    font-size: 20px;
+    background-color: #111;
+    cursor: pointer; 
+    color: white; 
+    position: fixed;
+    padding: 10px 15px; 
+    border: none;
+    top: 0; left: 0;
+    transition: all 0.3s; 
+    z-index: 9999;
+}
+
+.openbtn:hover { 
+    background-color: #444;
+}
+
 .desktop-menu {
     list-style: none;
     display: flex;
@@ -105,17 +122,7 @@ header {
     color: white;
 }
 
-.mobile-sidebar {
-    display: none;
-}
 
-.open-sidebar {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #fff;
-}
 
 .mobile-dropdown-content {
     display: none;
@@ -140,21 +147,6 @@ header {
 @media (max-width: 768px) {
     .desktop-menu {
         display: none;
-    }
-
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-    
-    .open-sidebar {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 2;
-    }
-
-    .mobile-sidebar {
-        display: block;
     }
 
     .mobile-menu {
