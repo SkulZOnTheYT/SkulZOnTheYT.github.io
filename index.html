@@ -6,11 +6,15 @@
     <title>SkulZ | My Website</title>
     <link rel="shortcut icon" href="/images/icon.png">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
          <nav>
           <ul class="desktop-menu">
+            <div class="logo">
+            <img src="Images/icon.png" alt="icon website">
+        </div>
             <li><a href="#">Beranda</a></li>
             <li><a href="https://skulzontheyt.github.io/Tentang/">Tentang</a></li>
             <li><a href="https://skulzontheyt.github.io/Kontak/">Kontak</a></li>
@@ -30,46 +34,19 @@
                 </ul>
             </li>
          </ul>
+         <ul class="mobile-menu">
+          <div id="mySidenav" class="sidenav">
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+             <a href="#">About</a>
+             <a href="#">Services</a>
+             <a href="#">Clients</a>
+             <a href="#">Contact</a>
+           </div>
+           <span onclick="openNav()">open</span>
+         </ul>
         </nav>
-        <button> class="openbtn" onclick="openNav()">&#9776; open</button>
-        <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn"</a>
-        <ul class="mobile-menu">
-            <li><a href="#">Beranda</a></li>
-            <li><a href="https://skulzontheyt.github.io/Tentang/">Tentang</a></li>
-            <li><a href="https://skulzontheyt.github.io/Kontak/">Kontak</a></li>
-            <li class="dropdown">
-                <a href="#">Karya</a>
-                <ul class="dropdown-content">
-                    <li><a href="https://skulzontheyt.github.io/Plugin/">Plugin</a></li>
-                    <li><a href="https://skulzontheyt.github.io/Sekolah/">Sekolah</a></li>
-                    <li><a href="https://skulzontheyt.github.io/Minecraft/">Minecraft</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Berita</a>
-                <ul class="dropdown-content">
-                    <li><a href="https://skulzontheyt.github.io/Edukasi/">Edukasi</a></li>
-                    <li><a href="https://skulzontheyt.github.io/Game/">Game</a></li>
-                </ul>
-            </li>
-        </ul>
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-      </div>
     </header>
-<script>
-    function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
-    }
-</script>
+
     <main>
         <section>
             <p align="center">
