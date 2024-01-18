@@ -6,138 +6,165 @@
     <title>SkulZ | My Website</title>
     <link rel="shortcut icon" href="Images/icon.ico">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-</head>
-<body>
-    <header>
-         <nav>
-          <ul class="desktop-menu">
-            <div class="logo">
-               <img width="200px" src="Images/icon.png" alt="icon website">
-            </div>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="https://skulzontheyt.github.io/Tentang/">Tentang</a></li>
-            <li><a href="https://skulzontheyt.github.io/Kontak/">Kontak</a></li>
-            <li class="dropdown">
-                <a href="#">Karya</a>
-                <ul class="dropdown-content">
-                    <li><a href="https://skulzontheyt.github.io/Plugin/">Plugin</a></li>
-                    <li><a href="https://skulzontheyt.github.io/Sekolah/">Sekolah</a></li>
-                    <li><a href="https://skulzontheyt.github.io/Minecraft/">Minecraft</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Berita</a>
-                <ul class="dropdown-content">
-                    <li><a href="https://skulzontheyt.github.io/Edukasi/">Edukasi</a></li>
-                    <li><a href="https://skulzontheyt.github.io/Game/">Game</a></li>
-                </ul>
-            </li>
-         </ul>
-         <ul class="mobile-menu">
-          <div id="mySidenav" class="sidenav">
-             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-             <li><a href="#">Beranda</a></li>
-             <li><a href="https://skulzontheyt.github.io/Tentang/">Tentang</a></li>
-             <li><a href="https://skulzontheyt.github.io/Kontak/">Kontak</a></li>
-             <li class="dropdown">
-                <a href="#">Karya</a>
-                <ul class="dropdown-content">
-                    <li><a href="https://skulzontheyt.github.io/Plugin/">Plugin</a></li>
-                    <li><a href="https://skulzontheyt.github.io/Sekolah/">Sekolah</a></li>
-                    <li><a href="https://skulzontheyt.github.io/Minecraft/">Minecraft</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Berita</a>
-                <ul class="dropdown-content">
-                    <li><a href="https://skulzontheyt.github.io/Edukasi/">Edukasi</a></li>
-                    <li><a href="https://skulzontheyt.github.io/Game/">Game</a></li>
-                </ul>
-            </li>
-           </div>
-           <span onclick="openNav()">☰</span>
-         </ul>
-        </nav>
-    </header>
+  <body>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white" id="mainNav">
+		<div class="container px-4 px-lg-5">
+			<a class="navbar-brand" href="#page-top">SkulZ Website</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				Menu ☰
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+					<li class="nav-item"><a class="nav-link" href="#projects">Projek</a></li>
+					<li class="nav-item"><a class="nav-link" href="http://skulzwebsite.rf.gd/">Berita</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-    <main>
-        <img src="Images/background.gif">
-        <section>
-               <h2>Tentang Saya</h2>
-               <p>Selamat datang di website saya.</p>
-        </section>
-        <section>
-            <h2>Daftar Link</h2>
-            <div class="wrapper" id="google">
-                <a href="https://www.google.com" class="button">Google</a>
-            </div>
-            <div class="wrapper" id="facebook">
-                <a href="https://www.facebook.com" class="button">Facebook</a>
-            </div>
-            <div class="wrapper" id="twitter">
-                <a href="https://www.twitter.com" class="button">Twitter</a>
-            </div>
-            <div class="wrapper" id="instagram">
-                <a href="https://www.instagram.com" class="button">Instagram</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h6>Tentang Web Ini</h6>
-            <p class="text-justify">SkulZOnTheYT membuat web ini <i>tujuannya hanya untuk Pembelajaran saja,</i> karena saya sebagai author dari web ini hanya menjadikan web ini open source dengan menempatkan file web ini didalam github, semua bisa mengcopy, mengedit, mengubah code didalamnya. </p>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Keahlian Saya</h6>
-            <ul class="footer-links">
-              <li><a href="https://unity.com/">Unity Engine</a></li>
-              <li><a href="https://minecraft.net/en-us">Minecraft</a></li>
-              <li><a href="https://php.net/">PHP</a></li>
-              <li><a href="https://java.com/en/">Java</a></li>
-              <li><a href="https://developer.android.com/">Android SDK</a></li>
-              <li><a href="https://github.com/pmmp/PocketMine-MP">Pocketmine</a></li>
-            </ul>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Link lainnya</h6>
-            <ul class="footer-links">
-              <li><a href="https://skulzontheyt.github.io/Tentang/">Tentang Saya</a></li>
-              <li><a href="https://skulzontheyt.github.io/Hubungi/">Hubungi Saya</a></li>
-              <li><a href="https://github.com/SkulZOnTheYT/SkulZOnTheYT.github.io">Ingin Bercontribusi?</a></li>
-              <li><a href="https://skulzontheyt.github.io/LICENSE/">Lisensi</a></li>
-            </ul>
-          </div>
-        </div>
-        <hr>
+	<!-- Background image -->
+	<div
+    class="p-5 text-center bg-image px-4 px-lg-5"
+    style="
+      background-image: url(https://raw.githubusercontent.com/SkulZOnTheYT/SkulZOnTheYT.github.io/main/Images/background.webp);
+      background-size: cover;
+    "
+  >
+    <div class="mask" style="background-color: rgba(255, 255, 255, 0);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+          <h1 class="mb-3">Welcome To My Website</h1>
+          <a class="btn btn-outline-light btn-lg btn-hover-blue" href="#about" role="button">Pelajari Selengkapnya</a>
+        </div>        
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
-         <a href="https://github.com/SkulZOnTheYT/">SkulZOnTheYT</a>.
-            </p>
-          </div>
+    </div>
+  </div>
 
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="facebook" href="https://web.facebook.com/profile.php?id=100050437450330"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="https://twitter.com/SkulZ_Story"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="instagram" href="https://instagram.com/zakk_nothing15/"><i class="fa fa-instagram"></i></a></li>
-              <li><a class="youtube" href="https://www.youtube.com/channel/UC8RUA_A1BAEvb1ZI8vL0Plw"><i class="fa fa-youtube"></i></a></li>   
-            </ul>
-          </div>
+  <!-- About-->
+  <section id="about" class="bg-dark text-white">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="text-light mt-0">Tentang</h2>
+          <hr class="divider" />
+          <p class="mb-4">
+            SkulZOnTheYT membuat web ini <i>tujuannya hanya untuk Pembelajaran saja,</i> karena saya sebagai author dari web ini hanya menjadikan web ini open source dengan menempatkan file web ini didalam github, semua bisa mengcopy, mengedit, mengubah code didalamnya.
+          </p>
+          <h2 class="text-light mt-0">Ingin berdonasi?</h2>
+          <p class="mb-4">
+            Jika anda ingin mendukung website open source ini, silahkan berdonasi melalui payment maupun situs donasi dibawah ini:
+          </p>
+          <a href="https://paypal.me/SkulZeet" target="_blank">
+          <img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white">
+          </a>
+          <a href="https://patreon.com/SkulZeet" target="_blank">
+            <img src="https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white">
+          </a>
         </div>
       </div>
-</footer>
+    </div>
+  </section>
+
+  <!-- Projects-->
+  <div id="projects" style="background-color: black; padding: 20px;" class ="container px-4 px-lg-5">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#gcarouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="web.png" class="d-block w-100" alt="web">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Pembelajaran Website</h5>
+          <p>Belajar tentang WordPress dan Bootstrap</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="99999">
+        <img src="standard.gif" class="d-block w-100" alt=server">
+      </div>
+      <div class="carousel-item">
+        <img src="komputer.png" class="d-block w-100" alt="komputer">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Pelajari Tentang komputer</h5>
+          <p>sejarah, penemu, dan generasi komputer</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </div>
+
+  <!-- Footer-->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <h6>Keahlian Saya</h6>
+          <ul class="footer-links">
+            <li><a href="https://unity.com/">Unity Engine</a></li>
+            <li><a href="https://www.javascript.com/">JavaScript</a></li>
+            <li><a href="https://php.net/">PHP</a></li>
+            <li><a href="https://java.com/en/">Java</a></li>
+            <li><a href="https://developer.android.com/">Android SDK</a></li>
+            <li><a href="https://github.com/pmmp/PocketMine-MP">Pocketmine</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Game Saya</h6>
+          <ul class="footer-links">
+            <li><a href="https://minecraft.net/en-us">Minecraft</a></li>
+            <li><a href="https://m.mobilelegends.com/en">Mobile Legends</a></li>
+            <li><a href="https://ff.garena.com/id/">Free Fire</a></li>
+            <li><a href="https://playvalorant.com/id-id/">Valorant</a></li>
+            <li><a href="https://www.pubgmobile.com/id/home.shtml">PUBG</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Link lainnya</h6>
+          <ul class="footer-links">
+            <li><a href="#about">Tentang Saya</a></li>
+            <li><a href="https://wa.me/+628982696987">Hubungi Saya</a></li>
+            <li><a href="https://github.com/SkulZOnTheYT/SkulZOnTheYT.github.io">Ingin Bercontribusi?</a></li>
+            <li><a href="https://skulzontheyt.github.io/LICENSE/">Lisensi</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-8 col-sm-6 col-xs-12">
+      <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
+      <a href="https://github.com/SkulZOnTheYT/">SkulZOnTheYT</a>.
+      </p>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <ul class="social-icons">
+        <li><a class="facebook" href="https://web.facebook.com/profile.php?id=100050437450330"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="twitter" href="https://twitter.com/SkulZ_Story"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="instagram" href="https://instagram.com/zakk_nothing15/"><i class="fa fa-instagram"></i></a></li>
+        <li><a class="youtube" href="https://www.youtube.com/channel/UC8RUA_A1BAEvb1ZI8vL0Plw"><i class="fa fa-youtube"></i></a></li>   
+      </ul>
+     </div>
+    </div>
+   </div>
+  </footer>
 </body>
 </html>
