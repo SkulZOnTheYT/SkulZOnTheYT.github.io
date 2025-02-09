@@ -1,0 +1,263 @@
+body {
+    font-family: 'quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.jumbotron {
+    padding: 60px;
+    background-color: #00c8eb;
+    text-align: center;
+    color: white;
+    margin-bottom: -18px;
+}
+
+ul {
+    background-color: #525252;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+h1 {
+    text-align:center;
+    text-decoration: underline;
+}
+
+#down {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#down::first-letter {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#down:hover {
+    color:#149ef2;
+    background-color: #e9e9e9;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: #149ef2;
+    font-weight: bold;
+    color: white;
+    transition: transform 1s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#myForm {
+    margin-left: 8em;
+}
+
+input {
+    border: 1px solid #000000;
+    background-color: #e9e9e9;
+    margin-left: 10px;
+    margin: 4px;
+    padding: 3px;
+    border-radius: 8px;
+}
+
+input:focus-visible {
+    appearance: none;
+    outline: none;
+    box-shadow:  0 0 0 4px rgb(30, 144, 255, 0.5);
+}
+
+input[type='submit'] {
+    background-color: #149ef2;
+    border-radius: 15px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-left: 5em;
+    transition: transform 1s;
+}
+input[type='submit']:hover {
+    transform: scale(1.1);
+
+}
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+}
+
+a {
+    color:white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #149ef2;
+}
+
+a:active {
+    color: red;
+}
+
+#arc {
+    font-style: oblique;
+    text-align: center;
+    font-size: 18px;
+    background-color:#ccc;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+#table {
+    background-color: #525252;
+    padding: 20px;
+    color: white;
+    overflow-x: auto;
+}
+
+#dataTable {
+    width: 60%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #DDDDDD;
+    padding: 8px;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: #494949;
+    padding-top: 12px; 
+    padding-bottom: 12px; 
+    text-align: left;
+}
+
+h2{
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    #myForm {
+        margin-left: 5em;
+    }
+}
+
+@media (max-width: 768px) {
+    #dataTable {
+        width: 100%;
+        font-size: 14px;
+    }
+    th, td {
+        padding: 6px;
+    }
+    #table {
+        padding: 10px;
+    }
+    td {
+        white-space: nowrap;
+    }
+    #arc img {
+        float: left;
+        margin: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .shadow {
+        max-width: 30%;
+    }
+    #myForm {
+        margin-left: 35em;
+    }
+    input[type='submit'] {
+        margin-left: 5em;
+    }
+    ul li {
+        margin: 0 30px;
+    }
+}
+
+#ord {
+    background-color: #ffa055;
+    text-align: center;
+    animation-name: color;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes color {
+    0% { background-color: magenta;}
+    25% { background-color: yellow;}
+    50% {background-color: red;}
+    75% {background-color: green;}
+    100% {background-color: blue;}
+}
+
+.shadow {
+  width: 15em;
+  border: 1px solid #333;
+  box-shadow: 8px 8px 5px #444;
+  padding: 8px 12px;
+  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+  overflow: auto;
+  width: 80%;
+  margin: 0 auto;
+}
+
+aside {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #ddd;
+    text-align: center;
+    padding: 20px;
+}

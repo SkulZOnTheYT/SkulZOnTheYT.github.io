@@ -1,0 +1,151 @@
+<html>
+  <head>
+    <title>Learning Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+      <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet"
+      >
+    <script src="script.js"></script>
+  </head>
+
+    <!-- My Code begins in here-->
+  <body>
+    <header>
+      <div class="jumbotron">
+        <h1 id="up">This First My Website</h1>
+        <p id="down">This website created by me<br>Please Understand</p>
+      </div>
+      <ul class="navbar">
+        <li><a href="#up">Home</a></li>
+        <li><a href="https://skulz.vercel.app/">About</a></li>
+        <li><a href="https://github.com/SkulZOnTheYT?tab=repositories">Project</a></li>
+        <li><a href="https://skulzeet.blogspot.com/">Berita</a></li>
+      </ul>
+      <div class="btn-container">
+        <button id="button" onclick='changeText()'>Yes I Agree</button>
+      </div>
+    </header>
+
+    <main>
+      <!--For Form Dropdown-->
+        <h2>This Form, Please complete this form</h2>
+        <form id="myForm">
+            <label for="dropdown">Chose your opinion</label>
+            <select id="dropdown">
+                <option value="yes">click here</option>
+                <option value="no">dont click</option>
+                <option value="think">hmmm</option>
+            </select><br>
+
+            <!--For Email-->
+            <label for="email">Email</label>
+            <input type="email" id="email" required autocomplete="email" placeholder="Email anda"><br>
+
+            <!--For Password-->
+            <label for="pass">password</label>
+            <input name="copy" type="password" id="pass" required autocomplete="new-password" placeholder="Password yang kuat"><br>
+
+            <!--For Telephone-->
+            <label for="tel">Telephone</label>
+            <input type="tel" id="tel"><br>
+
+            <!--For Submit-->
+            <input type="submit" onclick='processFormData(event)'>
+        </form>
+
+      <!--Table-->
+      <div id="table">
+        <h2>Database Simulation</h2>
+        <table id="dataTable">
+          <tr>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Telephone</th>
+          </tr>
+        </table>
+      </div>
+        
+      <!--Article-->
+        <article id="arc">
+            <h1>Who is SkulZeet</h1>
+            <section>
+              <img
+              src="https://avatars.githubusercontent.com/u/92020118?v=4"
+              alt="SkulZeet Logo"
+              width="200px"
+            />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores commodi corporis
+              doloribus eum ipsum obcaecati pariatur quam quo, voluptatum? A, assumenda atque delectus
+              dolore nam natus neque quisquam repudiandae?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At deserunt illum inventore
+              numquam officia recusandae, sit! Ab asperiores delectus dolor, eius est explicabo impedit
+              ipsa ipsum itaque mollitia neque nihil nisi officia praesentium sint! Accusantium libero
+              obcaecati provident qui? Error!
+            </p>
+            </section>
+        </article>
+
+      <!--Ordered & Unordered Style-->
+        <h1 id="ord">Top Orang Paling Serius</h1>  
+        <ol class="top" reversed>
+          <li>Wibu</li>
+          <li>Orang Random</li>
+          <li>Nolep</li>
+        </ol><br>
+
+      <!--Pre Text-->
+        <div class="shadow">
+          <pre>
+          SAJAK PUTIH
+        
+        Bersandar pada tari warna pelangi
+        Kau depanku bertudung sutra senja
+        Di hitam matamu kembang mawar dan melati
+        Harum rambutmu mengalun bergelut senda
+        
+        Sepi menyanyi, malam dalam mendoa tiba
+        Meriak muka air kolam jiwa
+        Dan dalam dadaku memerdu lagu
+        Menarik menari seluruh aku
+        
+        Hidup dari hidupku, pintu terbuka
+        Selama matamu bagiku menengadah
+        Selama kau darah mengalir dari luka
+        Antara kita Mati datang tidak membelah...
+        
+                          <q>Karya: Chairil Anwar</q>
+          </pre>
+        </div>
+    </main>
+
+      <!--Footer-->
+        <footer>
+          &copy; 2024 SkulZOnTheYT
+        </footer>
+    </body>
+
+    <!-- Internal Script-->
+     <script>
+      window.addEventListener('scroll', function() {
+        var navbar = document.querySelector('.navbar');
+        var jumbotron = document.querySelector('.jumbotron');
+        var jumbotronHeight = jumbotron.offsetHeight;
+
+        if (window.pageYOffset > jumbotronHeight) {
+          navbar.classList.add('fixed-top');
+        } else {
+          navbar.classList.remove('fixed-top');
+        }
+      });
+     </script>
+</html>
