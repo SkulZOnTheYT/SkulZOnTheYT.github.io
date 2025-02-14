@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes App</title>
+    <style>
+        :root {
+            --bg-color: #f0f0f0;
+            --header-color: #ff9800;
+            --text-color: #333;
+            --note-colors: #ffd54f, #81c784, #4fc3f7, #ff8a65, #ba68c8;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .app-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        #note-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        #notes-list {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        #notes-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        form {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        button {
+            background-color: var(--header-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: transform 0.1s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .app-layout {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <app-header></app-header>
+        <main class="app-layout">
+            <section id="note-form">
+                <note-form></note-form>
+            </section>
+            <section id="notes-list">
+                <div id="notes-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="notes.js"></script>
+    <script>
+        class AppHeader extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                    <header style="background-color: var(--header-color); padding: 1rem; text-align: center; margin-bottom: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                        <h1 style="margin: 0; color: white; font-size: 2.5rem;">Sticky Notes</h1>
+                    </header>
+                `;
+            }
+        }
+        customElements.define('app-header', AppHeader);
+
+        class NoteForm extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                    <form id="add-note-form">
+                        <input type="text" id="title" name="title" placeholder="Note Title" required>
+                        <textarea id="body" name="body" placeholder="Write your note here..." rows="4" required></textarea>
+                        <button type="submit">Add Sticky Note</button>
+                    </form>
+                `;
+
+                this.querySelector('form').addEventListener('submit', this.handleSubmit);
+            }
+
+            handleSubmit(e) {
+                e.preventDefault();
+                const title = document.getElementById('title').value;
+                const body = document.getElementById('body').value;
+                const newNote = {
+                    id: `notes-${Date.now()}`,
+                    title: title,
+                    body: body,
+                    createdAt: new Date().toISOString(),
+                    archived: false
+                };
+                notesData.unshift(newNote);
+                displayNotes();
+                e.target.reset();
+            }
+        }
+        customElements.define('note-form', NoteForm);
+
+        class NoteCard extends HTMLElement {
+            connectedCallback() {
+                const title = this.getAttribute('title');
+                const body = this.getAttribute('body');
+                const createdAt = new Date(this.getAttribute('created-at')).toLocaleString();
+                const colorIndex = Math.floor(Math.random() * 5);
+                const noteColor = getComputedStyle(document.documentElement).getPropertyValue(`--note-colors`).split(',')[colorIndex].trim();
+
+                this.innerHTML = `
+                    <div style="background-color: ${noteColor}; padding: 1rem; border-radius: 10px; box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); width: 200px; min-height: 200px; display: flex; flex-direction: column; transform: rotate(${Math.random() * 6 - 3}deg);">
+                        <h3 style="margin-top: 0; font-size: 1.2rem;">${title}</h3>
+                        <p style="flex-grow: 1; font-size: 0.9rem; overflow-wrap: break-word;">${body}</p>
+                        <div style="font-size: 0.7rem; text-align: right;">${createdAt}</div>
+                    </div>
+                `;
+            }
+        }
+        customElements.define('note-card', NoteCard);
+
+        function displayNotes() {
+            const notesGrid = document.getElementById('notes-grid');
+            notesGrid.innerHTML = '';
+            notesData.forEach(note => {
+                const noteCard = document.createElement('note-card');
+                noteCard.setAttribute('title', note.title);
+                noteCard.setAttribute('body', note.body);
+                noteCard.setAttribute('created-at', note.createdAt);
+                notesGrid.appendChild(noteCard);
+            });
+        }
+
+        displayNotes();
+    </script>
+</body>
+</html>
